@@ -1,0 +1,318 @@
+/* ===================================================================
+   THANDIWE - shared custom styles (used by index, about, contact ...)
+   Colours are sampled from the Thandiwe logo. Placeholder photography
+   stands in for the authentic Middelburg / Eastern Cape imagery.
+==================================================================== */
+:root {
+    /* accents sampled directly from the Thandiwe logo */
+    --tw-navy: #123E6B;
+    --tw-green: #2A7A38;
+    --tw-gold: #E0A423;
+    --tw-orange: #C1521E;
+    --tw-purple: #5B1A5E;
+    --tw-teal: #1B6E7D;
+}
+
+/* rainbow accent echoing the logo lettering */
+.tw-rainbow {
+    height: 5px; width: 100%;
+    background: linear-gradient(90deg,
+        var(--tw-navy) 0%, var(--tw-navy) 16%,
+        var(--tw-green) 16%, var(--tw-green) 33%,
+        var(--tw-gold) 33%, var(--tw-gold) 50%,
+        var(--tw-orange) 50%, var(--tw-orange) 66%,
+        var(--tw-purple) 66%, var(--tw-purple) 83%,
+        var(--tw-teal) 83%, var(--tw-teal) 100%);
+}
+.tw-rainbow-line { height: 4px; width: 70px; border-radius: 4px; margin-top: 14px;
+    background: linear-gradient(90deg, var(--tw-navy), var(--tw-green), var(--tw-gold), var(--tw-orange), var(--tw-purple), var(--tw-teal)); }
+.text-center .tw-rainbow-line { margin-left: auto; margin-right: auto; }
+
+body { color: #3d4448; }
+
+/* ---- Top bar ---- */
+.tw-topbar { background: #ffffff; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+.tw-logo { height: 66px; width: auto; }
+@media (max-width: 575.98px) { .tw-logo { height: 50px; } }
+
+/* ---- Navbar (fit 8 items) ---- */
+.navbar .navbar-nav .nav-link { margin-right: 16px; font-size: 15px; letter-spacing: .3px; }
+/* navy nav bar: light links that turn gold on hover / active */
+.navbar .navbar-nav .nav-link { color: rgba(255,255,255,.82); }
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active { color: var(--bs-primary); }
+.navbar h4 { color: #fff; }
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar .navbar-nav .nav-link { margin-right: 11px; font-size: 14px; }
+}
+.tw-donate-btn { letter-spacing: 1px; font-size: 14px; }
+.navbar .dropdown-menu .dropdown-header { text-transform: uppercase; letter-spacing: 1px; font-size: 12px; color: var(--tw-teal); font-weight: 700; }
+
+/* ---- Hero ---- */
+.tw-hero .carousel-text h1 { font-weight: 700; }
+.tw-badge-loc {
+    display: inline-block; background: var(--bs-secondary); color: #fff;
+    padding: 6px 18px; border-radius: 30px; font-size: 13px;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 22px;
+}
+.tw-hero .carousel-img img { border-radius: 6px; box-shadow: 0 20px 45px rgba(0,0,0,.18); }
+/* keep the carousel arrows from overlapping hero content on small screens */
+@media (max-width: 991.98px) { .header-carousel .owl-nav { display: none !important; } }
+
+/* ---- Section eyebrow ---- */
+.tw-eyebrow { text-transform: uppercase; letter-spacing: 3px; color: var(--bs-secondary); font-weight: 700; font-size: 14px; }
+
+/* ---- Pathway verb cards (LEARN / DISCOVER / GROW / THRIVE / LEAD) ---- */
+.tw-verb {
+    text-align: center; padding: 30px 16px; background: #fff; height: 100%;
+    box-shadow: 0 0 30px rgba(0,0,0,.05); transition: .4s; border-bottom: 3px solid transparent;
+}
+.tw-verb:hover { transform: translateY(-6px); box-shadow: 0 14px 34px rgba(0,0,0,.1); }
+.tw-verb .ic {
+    width: 74px; height: 74px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 18px; color: #fff; font-size: 27px;
+}
+.tw-verb h5 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.tw-verb p { font-size: 14px; margin-bottom: 0; }
+
+/* ---- Programme pillars ---- */
+.tw-pillar {
+    position: relative; background: #fff; padding: 40px 30px 34px; height: 100%;
+    box-shadow: 0 0 30px rgba(0,0,0,.05); transition: .4s; overflow: hidden;
+    border-top: 4px solid var(--bs-primary);
+}
+.tw-pillar:hover { box-shadow: 0 16px 38px rgba(0,0,0,.12); transform: translateY(-5px); }
+.tw-pillar .num {
+    position: absolute; top: 6px; right: 20px; font-size: 66px; font-weight: 700;
+    color: rgba(0,0,0,.04); font-family: 'Josefin Sans', sans-serif; line-height: 1;
+}
+.tw-pillar .ic { font-size: 36px; margin-bottom: 18px; }
+.tw-pillar h4 { margin-bottom: 12px; }
+.tw-pillar p { font-size: 15px; margin-bottom: 0; }
+
+/* ---- Featured programme (Ballroom) ---- */
+.tw-feature-tag {
+    display: inline-block; background: var(--bs-primary); color: var(--bs-dark);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    font-size: 12px; padding: 6px 16px; margin-bottom: 18px;
+}
+.tw-highlights { display: flex; gap: 14px; flex-wrap: wrap; margin: 22px 0; }
+.tw-highlights .h {
+    flex: 1 1 90px; text-align: center; background: #fff; border: 1px solid #eee;
+    padding: 16px 8px; border-radius: 6px;
+}
+.tw-highlights .h i { font-size: 22px; color: var(--bs-primary); margin-bottom: 8px; display: block; }
+.tw-highlights .h span { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--bs-secondary); font-weight: 600; }
+
+/* ---- Impact numbers band ---- */
+.tw-impact {
+    background: linear-gradient(rgba(18,62,107,.95), rgba(27,110,125,.95)), url(../img/bg.jpg) center center;
+    background-size: cover;
+}
+.tw-stat { text-align: center; padding: 14px 6px; }
+.tw-stat h2 { font-size: 3.1rem; color: var(--bs-primary); font-family: 'Josefin Sans', sans-serif; margin-bottom: 4px; line-height: 1; }
+.tw-stat > span { display: block; color: #fff; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; margin-top: 6px; }
+
+/* ---- The Thandiwe Pathway (flow) ---- */
+.tw-flow { display: flex; flex-wrap: nowrap; align-items: stretch; }
+.tw-flow-step {
+    flex: 1 1 0; min-width: 0; background: #fff; border-radius: 6px; padding: 24px 18px;
+    box-shadow: 0 0 30px rgba(0,0,0,.05); text-align: center;
+}
+.tw-flow-step .n { width: 42px; height: 42px; border-radius: 50%; background: var(--bs-secondary); color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-weight: 700; font-family: 'Josefin Sans', sans-serif; }
+.tw-flow-step h5 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.tw-flow-step ul { list-style: none; padding: 0; margin: 0; font-size: 14px; color: #6a7176; }
+.tw-flow-step ul li { padding: 3px 0; }
+.tw-flow-sep { display: flex; align-items: center; padding: 0 6px; color: var(--bs-primary); font-size: 22px; }
+@media (max-width: 991.98px) {
+    .tw-flow { flex-direction: column; }
+    .tw-flow-step { width: 100%; }
+    .tw-flow-sep { transform: rotate(90deg); padding: 12px 0; justify-content: center; }
+}
+
+/* ---- This is Thandiwe band ---- */
+.tw-video-band {
+    background: linear-gradient(rgba(16,36,61,.78), rgba(16,36,61,.66)), url(../img/tw-community.jpg) center center;
+    background-size: cover;
+}
+
+/* ---- Story ---- */
+.tw-story-img { position: relative; padding: 40px 0 40px 40px; }
+.tw-story-img::before { position: absolute; content: ""; top: 0; left: 0; width: calc(60% + 40px); height: 100%; background: var(--bs-primary); z-index: -1; }
+.tw-story-quote i { color: var(--bs-primary); }
+
+/* ---- Upcoming event ---- */
+.tw-event { display: flex; flex-wrap: wrap; box-shadow: 0 0 30px rgba(0,0,0,.06); background: #fff; }
+.tw-event .date { background: var(--bs-secondary); color: #fff; text-align: center; padding: 34px 30px; display: flex; flex-direction: column; justify-content: center; min-width: 190px; }
+.tw-event .date .d { font-size: 3rem; font-family: 'Josefin Sans', sans-serif; line-height: 1; }
+.tw-event .info { padding: 30px 34px; flex: 1 1 300px; display: flex; flex-direction: column; justify-content: center; }
+
+/* ---- Ways to help ---- */
+.tw-help { text-align: center; background: #fff; padding: 36px 24px; height: 100%; box-shadow: 0 0 30px rgba(0,0,0,.05); transition: .4s; }
+.tw-help:hover { transform: translateY(-6px); box-shadow: 0 14px 34px rgba(0,0,0,.1); }
+.tw-help .ic { width: 80px; height: 80px; border-radius: 50%; background: var(--bs-light); color: var(--bs-secondary); display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 20px; transition: .4s; }
+.tw-help:hover .ic { background: var(--bs-primary); color: var(--bs-dark); }
+
+/* ---- School partner cards ---- */
+.tw-school { background: #fff; height: 100%; box-shadow: 0 0 30px rgba(0,0,0,.05); transition: .4s; overflow: hidden; }
+.tw-school:hover { box-shadow: 0 14px 34px rgba(0,0,0,.1); }
+.tw-school img { height: 210px; object-fit: cover; width: 100%; }
+.tw-school .body { padding: 26px 24px; }
+.tw-school .tag { display: inline-block; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--bs-secondary); font-weight: 700; }
+.tw-school ul { list-style: none; padding: 0; margin: 14px 0 18px; }
+.tw-school ul li { padding: 4px 0; font-size: 14px; }
+.tw-school ul li i { color: var(--bs-primary); margin-right: 8px; }
+
+/* colour helpers echoing the logo */
+.bg-tw-navy { background: var(--tw-navy) !important; }
+.bg-tw-green { background: var(--tw-green) !important; }
+.bg-tw-gold { background: var(--tw-gold) !important; }
+.bg-tw-orange { background: var(--tw-orange) !important; }
+.bg-tw-purple { background: var(--tw-purple) !important; }
+.bg-tw-teal { background: var(--tw-teal) !important; }
+.text-tw-navy { color: var(--tw-navy) !important; }
+.text-tw-green { color: var(--tw-green) !important; }
+.text-tw-orange { color: var(--tw-orange) !important; }
+.text-tw-purple { color: var(--tw-purple) !important; }
+
+/* ===================================================================
+   About / Contact page styles
+==================================================================== */
+
+/* page header banner */
+.tw-page-header {
+    position: relative;
+    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/tw-community.jpg) center center;
+    background-size: cover;
+    padding: 84px 0;
+    color: #fff;
+}
+.tw-page-header h1 { color: #fff; }
+.tw-page-header .tw-rainbow-line { margin-top: 18px; }
+.tw-page-header .breadcrumb { margin: 0; padding: 0; background: transparent; justify-content: center; }
+.tw-page-header .breadcrumb-item,
+.tw-page-header .breadcrumb-item a { color: rgba(255,255,255,.85); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; }
+.tw-page-header .breadcrumb-item a:hover { color: var(--bs-primary); }
+.tw-page-header .breadcrumb-item.active { color: var(--bs-primary); }
+.tw-page-header .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.5); }
+
+/* vision / mission cards */
+.tw-vm { background: #fff; padding: 40px 34px; height: 100%; box-shadow: 0 0 30px rgba(0,0,0,.05); border-top: 4px solid var(--bs-primary); }
+.tw-vm .ic { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 24px; margin-bottom: 22px; }
+.tw-vm h3 { margin-bottom: 14px; }
+.tw-vm p { margin-bottom: 0; }
+
+/* who-we-are image treatment */
+.tw-about-img { position: relative; }
+.tw-about-img img { border-radius: 6px; box-shadow: 0 20px 45px rgba(0,0,0,.15); }
+.tw-about-img .badge-years {
+    position: absolute; right: 20px; bottom: -22px; background: var(--bs-primary); color: var(--bs-dark);
+    padding: 16px 22px; border-radius: 6px; text-align: center; box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+.tw-about-img .badge-years strong { font-family: 'Josefin Sans', sans-serif; font-size: 1.8rem; display: block; line-height: 1; }
+.tw-about-img .badge-years span { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* values */
+.tw-value { text-align: center; background: #fff; padding: 34px 22px; height: 100%; box-shadow: 0 0 30px rgba(0,0,0,.05); transition: .4s; border-bottom: 3px solid transparent; }
+.tw-value:hover { transform: translateY(-6px); box-shadow: 0 14px 34px rgba(0,0,0,.1); }
+.tw-value .ic { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 26px; margin: 0 auto 18px; }
+.tw-value h5 { margin-bottom: 10px; }
+.tw-value p { font-size: 14px; margin-bottom: 0; }
+
+/* story numbered points */
+.tw-story-point { display: flex; align-items: flex-start; margin-bottom: 22px; }
+.tw-story-point .n { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--bs-light); color: var(--bs-secondary); font-weight: 700; font-family: 'Josefin Sans', sans-serif; display: flex; align-items: center; justify-content: center; margin-right: 18px; }
+.tw-story-point h5 { margin-bottom: 4px; }
+.tw-story-point p { margin: 0; font-size: 15px; }
+
+/* leadership placeholders */
+.tw-leader { text-align: center; background: #fff; padding: 34px 20px; height: 100%; box-shadow: 0 0 30px rgba(0,0,0,.05); transition: .4s; }
+.tw-leader:hover { transform: translateY(-6px); box-shadow: 0 14px 34px rgba(0,0,0,.1); }
+.tw-leader .avatar { width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; background: var(--bs-light); color: var(--bs-secondary); font-size: 38px; border: 3px solid var(--bs-primary); }
+.tw-leader h5 { margin-bottom: 4px; }
+.tw-leader .role { color: var(--bs-primary); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.tw-leader p { font-size: 14px; margin: 12px 0 0; color: #6a7176; }
+
+/* contact info cards */
+.tw-contact-info { display: flex; align-items: flex-start; background: #fff; padding: 26px 24px; box-shadow: 0 0 30px rgba(0,0,0,.05); height: 100%; transition: .4s; }
+.tw-contact-info:hover { box-shadow: 0 14px 34px rgba(0,0,0,.1); }
+.tw-contact-info .ic { flex-shrink: 0; width: 54px; height: 54px; border-radius: 50%; background: var(--bs-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-right: 16px; }
+.tw-contact-info h6 { text-transform: uppercase; letter-spacing: 1px; color: var(--bs-secondary); font-size: 13px; margin-bottom: 4px; }
+.tw-contact-info p { margin: 0; }
+
+/* contact form */
+.tw-form { background: #fff; padding: 40px; box-shadow: 0 0 30px rgba(0,0,0,.05); }
+.tw-form .form-control { background: var(--bs-light); border: 1px solid #eadfbf; }
+.tw-form .form-control:focus { box-shadow: none; border-color: var(--bs-primary); }
+
+/* map */
+.tw-map { box-shadow: 0 0 30px rgba(0,0,0,.06); line-height: 0; }
+.tw-map iframe { width: 100%; height: 430px; border: 0; display: block; }
+.tw-map .placeholder-map { width: 100%; height: 430px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(18,62,107,.9), rgba(27,110,125,.9)), url(../img/bg.jpg) center center; background-size: cover; color: #fff; line-height: 1.5; padding: 20px; }
+.tw-map .placeholder-map i { font-size: 46px; color: var(--bs-primary); margin-bottom: 16px; }
+
+/* generic CTA band */
+.tw-cta-band { background: linear-gradient(rgba(18,62,107,.94), rgba(18,62,107,.94)), url(../img/bg.jpg) center center; background-size: cover; }
+
+/* ===================================================================
+   Programmes / Impact / Stories / Get Involved / News / Donate
+==================================================================== */
+
+/* programme card */
+.tw-prog { background:#fff; height:100%; box-shadow:0 0 30px rgba(0,0,0,.05); transition:.4s; overflow:hidden; display:flex; flex-direction:column; }
+.tw-prog:hover { box-shadow:0 14px 34px rgba(0,0,0,.1); transform:translateY(-4px); }
+.tw-prog .top { padding:28px 26px 0; }
+.tw-prog .ic { width:64px; height:64px; border-radius:14px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:26px; margin-bottom:16px; }
+.tw-prog .tagline { color:var(--bs-primary); font-size:12px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; }
+.tw-prog h4 { margin:2px 0 0; }
+.tw-prog .body { padding:14px 26px 26px; display:flex; flex-direction:column; flex-grow:1; }
+.tw-prog p { font-size:14.5px; }
+.tw-prog .cta { margin-top:auto; padding-top:8px; }
+
+/* pillar heading */
+.tw-pillar-head { display:flex; align-items:center; margin-bottom:10px; }
+.tw-pillar-head .pn { font-family:'Josefin Sans',sans-serif; font-size:2.6rem; font-weight:700; color:var(--bs-primary); margin-right:18px; line-height:1; }
+.tw-pillar-head h2 { margin:0; }
+
+/* meals / mini counters */
+.tw-mini { text-align:center; padding:10px; }
+.tw-mini h2 { font-family:'Josefin Sans',sans-serif; color:var(--bs-primary); font-size:2.6rem; margin-bottom:2px; line-height:1; }
+.tw-mini span { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:var(--bs-secondary); font-weight:600; }
+
+/* metric card (impact) */
+.tw-metric { background:#fff; padding:26px 20px; text-align:center; height:100%; box-shadow:0 0 30px rgba(0,0,0,.05); transition:.4s; }
+.tw-metric:hover { box-shadow:0 14px 34px rgba(0,0,0,.1); }
+.tw-metric .ic { font-size:28px; margin-bottom:12px; }
+.tw-metric h5 { margin-bottom:4px; }
+.tw-metric span { font-size:13px; color:#6a7176; }
+.tw-metric .tag { display:inline-block; margin-top:8px; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--bs-secondary); background:var(--bs-light); padding:3px 10px; border-radius:20px; font-weight:700; }
+
+/* calendar */
+.tw-cal { background:#fff; height:100%; box-shadow:0 0 30px rgba(0,0,0,.05); border-top:4px solid var(--bs-primary); padding:28px 26px; }
+.tw-cal h4 { text-transform:uppercase; letter-spacing:1px; }
+.tw-cal ul { list-style:none; padding:0; margin:14px 0 0; }
+.tw-cal ul li { padding:7px 0; font-size:14px; border-bottom:1px solid #f2f2f2; }
+.tw-cal ul li:last-child { border-bottom:0; }
+.tw-cal ul li i { color:var(--bs-primary); margin-right:8px; }
+
+/* donation designation options */
+.tw-give-opt { display:block; cursor:pointer; margin:0; height:100%; }
+.tw-give-opt input { position:absolute; opacity:0; }
+.tw-give-opt .box { background:#fff; border:2px solid #eee; border-radius:10px; padding:18px 12px; text-align:center; transition:.25s; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.tw-give-opt .box i { font-size:22px; color:var(--bs-secondary); margin-bottom:10px; }
+.tw-give-opt .box span { font-size:14px; font-weight:600; line-height:1.3; }
+.tw-give-opt:hover .box { border-color:var(--bs-primary); }
+.tw-give-opt input:checked + .box { border-color:var(--bs-primary); background:var(--bs-light); }
+.tw-give-opt input:focus-visible + .box { outline:2px solid var(--bs-primary); }
+
+/* frequency toggle */
+.tw-freq { display:inline-flex; background:var(--bs-light); border-radius:40px; padding:5px; }
+.tw-freq label { margin:0; }
+.tw-freq input { position:absolute; opacity:0; }
+.tw-freq label span { display:block; padding:10px 30px; border-radius:40px; font-weight:600; cursor:pointer; color:var(--bs-secondary); transition:.25s; }
+.tw-freq input:checked + span { background:var(--bs-primary); color:var(--bs-dark); }
+
+/* simple list with check marks */
+.tw-checklist { list-style:none; padding:0; margin:0; }
+.tw-checklist li { padding:8px 0; border-bottom:1px solid #f2f2f2; }
+.tw-checklist li i { color:var(--bs-primary); margin-right:10px; }
