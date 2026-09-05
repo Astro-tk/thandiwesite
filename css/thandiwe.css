@@ -132,7 +132,7 @@ body { color: #3d4448; }
 
 /* ---- This is Thandiwe band ---- */
 .tw-video-band {
-    background: linear-gradient(rgba(16,36,61,.78), rgba(16,36,61,.66)), url(../img/tw-community.jpg) center center;
+    background: linear-gradient(rgba(16,36,61,.78), rgba(16,36,61,.66)), url(../img/contact.jpg) center center;
     background-size: cover;
 }
 
