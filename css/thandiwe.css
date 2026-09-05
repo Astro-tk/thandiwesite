@@ -182,10 +182,34 @@ body { color: #3d4448; }
 /* page header banner */
 .tw-page-header {
     position: relative;
-    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/contact.jpg) center center;
-    background-size: cover;
     padding: 84px 0;
     color: #fff;
+    background-size: cover;
+    background-position: center center;
+}
+/* Contact page banner */
+.tw-page-contact {
+    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/contact-banner.jpg) center center;
+}
+
+/* Impact page banner */
+.tw-page-impact {
+    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/impact-banner.jpg) center center;
+}
+
+/* Stories page banner */
+.tw-page-stories {
+    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/stories-banner.jpg) center center;
+}
+
+/* Get Involved page banner */
+.tw-page-involved {
+    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/involved-banner.jpg) center center;
+}
+
+/* News page banner */
+.tw-page-news {
+    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/news-banner.jpg) center center;
 }
 .tw-page-header h1 { color: #fff; }
 .tw-page-header .tw-rainbow-line { margin-top: 18px; }
