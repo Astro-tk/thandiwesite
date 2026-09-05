@@ -182,7 +182,7 @@ body { color: #3d4448; }
 /* page header banner */
 .tw-page-header {
     position: relative;
-    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/tw-community.jpg) center center;
+    background: linear-gradient(rgba(16,36,61,.88), rgba(18,62,107,.80)), url(../img/contact.jpg) center center;
     background-size: cover;
     padding: 84px 0;
     color: #fff;
