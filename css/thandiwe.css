@@ -422,3 +422,35 @@ span.tw-rainbow-line { display: inline-block; }
 .tw-focus .body .tagline { color: var(--bs-primary); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 4px; }
 .tw-focus .body .cta { margin-top: auto; padding-top: 14px; }
 .tw-focus .body p { color: #5c636a; }
+
+/* ===================================================================
+   Softer look - rounded corners across the whole site
+   (appended last so it relaxes the sharper radii set earlier)
+==================================================================== */
+/* buttons & icon tiles */
+.btn { border-radius: 8px; }
+.btn-square, .btn-sm-square { border-radius: 10px; }
+.btn-lg-square { border-radius: 12px; }
+.navbar-toggler { border-radius: 8px; }
+
+/* form fields */
+.form-control, .form-select { border-radius: 8px !important; }
+
+/* cards, panels & media -> one soft, consistent radius */
+.tw-focus, .tw-school, .tw-prog, .tw-help, .tw-verb, .tw-value, .tw-vm,
+.tw-vm2, .tw-metric, .tw-measure-item, .tw-leader, .tw-cal, .tw-pillar,
+.tw-event, .tw-flow-step, .tw-story-frame, .tw-round-img, .tw-form,
+.tw-contact-info, .tw-map, .tw-hero .carousel-img img,
+.bg-secondary.p-5, .bg-secondary.p-4 { border-radius: 14px; }
+
+/* clip flush content/images to the rounded corners */
+.tw-focus, .tw-school, .tw-event, .tw-story-frame, .tw-map { overflow: hidden; }
+.row.g-0.shadow-sm { border-radius: 16px; overflow: hidden; }
+
+/* softer dropdown */
+.navbar .dropdown-menu { border-radius: 12px; overflow: hidden; padding-top: 6px; padding-bottom: 6px; }
+
+/* small tags / chips */
+.tw-feature-tag { border-radius: 6px; }
+.tw-highlights .h { border-radius: 10px; }
+.tw-focus .img .label { border-radius: 0 10px 0 0; }
