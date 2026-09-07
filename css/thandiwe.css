@@ -558,3 +558,47 @@ span.tw-rainbow-line { display: inline-block; }
 .tw-page-header.tw-ph-stories {
     background: linear-gradient(rgba(13,32,54,.86), rgba(18,62,107,.80)), url(../img/banner-stories.jpg) center 32% / cover;
 }
+
+/* ===================================================================
+   Mobile refinements (do not affect the >=992px desktop layout)
+==================================================================== */
+/* logo sits in the navy bar in place of the old "Menu" label */
+.tw-mobile-brand { display: inline-flex; align-items: center; background: #fff; border-radius: 8px; padding: 5px 12px; margin: 0; line-height: 0; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.tw-mobile-brand img { height: 30px; width: auto; }
+
+/* footer wordmark sits on the dark footer -> render it crisp white */
+.tw-foot-logo { filter: brightness(0) invert(1); }
+
+@media (max-width: 991.98px) {
+    /* the desktop nav gutter (0 90px) crushes the bar on phones -> full width */
+    .nav-bar { padding-left: 0; padding-right: 0; }
+
+    /* tidy the collapsed menu: real spacing, dividers, larger tap targets */
+    .navbar .navbar-collapse { margin-top: 12px; border-top: 1px solid rgba(255,255,255,.14); padding-top: 6px; }
+    .navbar .navbar-nav { margin-top: 0; border-top: 0; }
+    .navbar .navbar-nav .nav-link { margin-right: 0; padding: 12px 2px; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 16px; }
+    .navbar .navbar-nav .dropdown-menu.bg-light { background: rgba(255,255,255,.06) !important; border-radius: 8px; margin: 2px 0 6px !important; border: 0; }
+    .navbar .navbar-nav .dropdown-item { color: rgba(255,255,255,.85); padding: 10px 14px; white-space: normal; }
+    .navbar .navbar-nav .dropdown-item:hover,
+    .navbar .navbar-nav .dropdown-item:focus { background: rgba(255,255,255,.10); color: #fff; }
+    .navbar .tw-donate-btn { display: block; text-align: center; }
+
+    /* calmer heading sizes on small screens */
+    .tw-hero .carousel-text h1 { font-size: 2rem; line-height: 1.2; }
+    .tw-page-header h1.display-4 { font-size: 2rem; }
+    .display-6 { font-size: 1.6rem; }
+
+    /* softer section + header padding so pages feel less tall on a phone */
+    .tw-page-header { padding: 52px 0 !important; }
+    .container-fluid.py-5, .container.py-5 { padding-top: 2.25rem !important; padding-bottom: 2.25rem !important; }
+}
+
+@media (max-width: 575.98px) {
+    /* hero buttons go full width and stack cleanly instead of crowding */
+    .tw-hero .carousel-text .d-flex.flex-wrap .btn { flex: 1 1 100%; margin-right: 0 !important; }
+    .tw-hero .carousel-text h1 { font-size: 1.7rem; }
+    .display-4 { font-size: 1.9rem; }
+    .tw-badge-loc { letter-spacing: 1px; font-size: 11px; }
+    /* keep media flush to screen edges tidy */
+    .tw-about-media { margin: 8px; }
+}
