@@ -393,7 +393,7 @@ span.tw-rainbow-line { display: inline-block; }
    Impact page - cleaner, photo-led (fewer icons)
 ==================================================================== */
 .tw-page-header.tw-ph-impact {
-    background: linear-gradient(rgba(14,42,68,.88), rgba(18,62,107,.80)), url(../img/banner-2.jpg) center 22% / cover;
+    background: linear-gradient(rgba(13,32,54,.88), rgba(18,62,107,.82)), url(../img/banner-impact.jpg) center 32% / cover;
     padding: 92px 0;
 }
 .tw-round-img { border-radius: 12px; box-shadow: 0 24px 50px rgba(0,0,0,.16); width: 100%; display: block; }
@@ -545,3 +545,16 @@ span.tw-rainbow-line { display: inline-block; }
 /* 5. top-bar utility icons -> gold */
 .tw-topbar .btn-square.bg-secondary { background: var(--tw-gold-tint) !important; }
 .tw-topbar .btn-square.bg-secondary i { color: var(--tw-gold) !important; }
+
+/* ===================================================================
+   Page-header banners - per-page photography (Contact / Get Involved / Stories)
+==================================================================== */
+.tw-page-header.tw-ph-contact {
+    background: linear-gradient(rgba(13,32,54,.86), rgba(18,62,107,.80)), url(../img/banner-contact.jpg) center center / cover;
+}
+.tw-page-header.tw-ph-getinvolved {
+    background: linear-gradient(rgba(13,32,54,.84), rgba(18,62,107,.78)), url(../img/banner-get-involved.jpg) center 45% / cover;
+}
+.tw-page-header.tw-ph-stories {
+    background: linear-gradient(rgba(13,32,54,.86), rgba(18,62,107,.80)), url(../img/banner-stories.jpg) center 32% / cover;
+}
