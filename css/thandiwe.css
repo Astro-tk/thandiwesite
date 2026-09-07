@@ -454,3 +454,15 @@ span.tw-rainbow-line { display: inline-block; }
 .tw-feature-tag { border-radius: 6px; }
 .tw-highlights .h { border-radius: 10px; }
 .tw-focus .img .label { border-radius: 0 10px 0 0; }
+
+/* ===================================================================
+   Homepage impact band - photo backdrop, icons + dashed number boxes
+==================================================================== */
+.tw-impact-photo { position: relative; background: url(../img/tw-hero.jpg) center center / cover no-repeat; }
+.tw-impact-photo::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(13,35,61,.84), rgba(18,62,107,.78)); }
+.tw-impact-photo > .container { position: relative; z-index: 1; }
+.tw-istat { text-align: center; padding: 34px 18px 30px; border: 1px solid rgba(255,255,255,.22); border-radius: 14px; height: 100%; transition: .4s; }
+.tw-istat:hover { border-color: rgba(224,164,35,.65); background: rgba(255,255,255,.04); }
+.tw-istat .ic { font-size: 40px; color: #fff; margin-bottom: 18px; line-height: 1; }
+.tw-istat h5 { color: #fff; margin-bottom: 18px; font-size: 18px; }
+.tw-istat .num { display: inline-block; min-width: 118px; border: 2px dashed rgba(255,255,255,.45); border-radius: 8px; padding: 8px 16px; font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 1.9rem; color: var(--bs-primary); line-height: 1; }
