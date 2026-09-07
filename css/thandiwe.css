@@ -466,3 +466,32 @@ span.tw-rainbow-line { display: inline-block; }
 .tw-istat .ic { font-size: 40px; color: #fff; margin-bottom: 18px; line-height: 1; }
 .tw-istat h5 { color: #fff; margin-bottom: 18px; font-size: 18px; }
 .tw-istat .num { display: inline-block; min-width: 118px; border: 2px dashed rgba(255,255,255,.45); border-radius: 8px; padding: 8px 16px; font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 1.9rem; color: var(--bs-primary); line-height: 1; }
+
+/* ===================================================================
+   Homepage "Why Thandiwe" counter tiles (gold / navy checkerboard)
+==================================================================== */
+.tw-whytiles { border-radius: 16px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.10); }
+.tw-tile { text-align: center; padding: 46px 20px; height: 100%; transition: .35s; }
+.tw-tile .ic { font-size: 34px; margin-bottom: 14px; line-height: 1; }
+.tw-tile h2 { font-family: 'Josefin Sans', sans-serif; font-size: 3rem; margin: 0 0 4px; line-height: 1; }
+.tw-tile span { font-size: 14px; display: block; }
+.tw-tile.gold { background: var(--tw-gold); }
+.tw-tile.gold .ic { color: var(--tw-navy); }
+.tw-tile.gold h2, .tw-tile.gold span { color: var(--bs-dark); }
+.tw-tile.navy { background: var(--tw-navy); }
+.tw-tile.navy .ic { color: var(--bs-primary); }
+.tw-tile.navy h2 { color: #fff; }
+.tw-tile.navy span { color: rgba(255,255,255,.85); }
+.tw-tile:hover { filter: brightness(1.05); }
+
+/* ===================================================================
+   Impact page "What we measure" - premium metric cards
+==================================================================== */
+.tw-mcard { position: relative; background: #fff; border: 1px solid #eef0f2; border-radius: 14px; padding: 26px 26px 24px; height: 100%; overflow: hidden; transition: .4s; }
+.tw-mcard:hover { box-shadow: 0 16px 38px rgba(0,0,0,.09); transform: translateY(-4px); border-color: #ecdfbe; }
+.tw-mcard .idx { position: absolute; right: 14px; top: 0; font-family: 'Josefin Sans', sans-serif; font-size: 3.6rem; font-weight: 700; color: rgba(18,62,107,.06); line-height: 1; }
+.tw-mcard .status { display: inline-flex; align-items: center; gap: 9px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; color: var(--bs-secondary); margin-bottom: 14px; position: relative; z-index: 1; }
+.tw-mcard .status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bs-primary); box-shadow: 0 0 0 4px rgba(224,164,35,.18); }
+.tw-mcard.live .status { color: var(--tw-green); }
+.tw-mcard.live .status .dot { background: var(--tw-green); box-shadow: 0 0 0 4px rgba(42,122,56,.18); }
+.tw-mcard h5 { margin: 0; position: relative; z-index: 1; }
