@@ -510,3 +510,38 @@ span.tw-rainbow-line { display: inline-block; }
 .tw-vitem h4 { margin-bottom: 12px; }
 .tw-vitem p { font-size: 15px; margin-bottom: 16px; color: #6a7176; }
 .tw-vitem .vline { display: block; height: 2px; width: 100%; background: var(--bs-primary); opacity: .55; }
+
+/* ===================================================================
+   Unified gold icons - every accent icon now uses the logo gold
+   (appended last so it overrides the earlier per-colour icon styles)
+==================================================================== */
+:root { --tw-gold-tint: rgba(224,164,35,.12); }
+
+/* 1. bare icon glyphs that were tinted with the other logo colours -> gold */
+.text-tw-navy, .text-tw-green, .text-tw-orange,
+.text-tw-purple, .text-tw-teal, .text-tw-gold { color: var(--tw-gold) !important; }
+.tw-pillar .ic { color: var(--tw-gold); }
+.tw-give-opt .box i { color: var(--tw-gold); }
+.tw-istat .ic { color: var(--tw-gold); }
+
+/* 2. solid-colour icon tiles (verb cards, partner cards, feature chips)
+      -> soft warm tile with a gold glyph: keeps contrast, unifies the colour */
+.tw-verb .ic.bg-tw-navy, .tw-verb .ic.bg-tw-green, .tw-verb .ic.bg-tw-gold,
+.tw-verb .ic.bg-tw-orange, .tw-verb .ic.bg-tw-purple,
+.tw-prog .ic.bg-tw-navy, .tw-prog .ic.bg-tw-green, .tw-prog .ic.bg-tw-gold,
+.tw-prog .ic.bg-tw-orange, .tw-prog .ic.bg-tw-teal, .tw-prog .ic.bg-tw-purple,
+.tw-feature-list .item .chip {
+    background: var(--tw-gold-tint) !important;
+    color: var(--tw-gold) !important;
+}
+
+/* 3. contact + help icon circles -> same gold treatment */
+.tw-contact-info .ic { background: var(--tw-gold-tint) !important; color: var(--tw-gold) !important; }
+.tw-help .ic { color: var(--tw-gold); }
+
+/* 4. vision / mission tiles sit on dark panels: keep the frosted tile, gold glyph */
+.tw-vm2 .ic { color: var(--tw-gold); }
+
+/* 5. top-bar utility icons -> gold */
+.tw-topbar .btn-square.bg-secondary { background: var(--tw-gold-tint) !important; }
+.tw-topbar .btn-square.bg-secondary i { color: var(--tw-gold) !important; }
