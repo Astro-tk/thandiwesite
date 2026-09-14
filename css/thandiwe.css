@@ -33,6 +33,10 @@ body { color: #3d4448; }
 /* italic emphasis words (Josefin Sans / body italics loaded via the font link) */
 em, .tw-em { font-style: italic; font-weight: inherit; }
 
+/* organisation slogan */
+.tw-slogan { color: var(--bs-primary) !important; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 0; }
+.tw-topbar-slogan { font-size: 11px; letter-spacing: 1.5px; margin-top: 3px; line-height: 1.1; }
+
 /* ---- Top bar ---- */
 .tw-topbar { background: #ffffff; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
 .tw-logo { height: 66px; width: auto; }
