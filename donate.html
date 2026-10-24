@@ -31,7 +31,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Thandiwe custom stylesheet (shared across pages) -->
-    <link href="css/thandiwe.css?v=5" rel="stylesheet">
+    <link href="css/thandiwe.css?v=6" rel="stylesheet">
 </head>
 
 <body>
@@ -147,61 +147,61 @@
                     <div class="row g-3 mb-4">
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" checked>
+                            <input type="radio" form="donate-form" name="designation" value="Where Most Needed" checked>
                             <div class="box"><i class="fa fa-hand-holding-heart"></i><span>Where Most Needed</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="Education">
                             <div class="box"><i class="fa fa-graduation-cap"></i><span>Education</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="Ballroom &amp; Arts">
                             <div class="box"><i class="fa fa-music"></i><span>Ballroom &amp; Arts</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="Chess">
                             <div class="box"><i class="fa fa-chess"></i><span>Chess</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="Music">
                             <div class="box"><i class="fa fa-guitar"></i><span>Music</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="STEM">
                             <div class="box"><i class="fa fa-flask"></i><span>STEM</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="Youth Job Readiness">
                             <div class="box"><i class="fa fa-briefcase"></i><span>Youth Job Readiness</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="Community Kitchen">
                             <div class="box"><i class="fa fa-utensils"></i><span>Community Kitchen</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="School Uniform Drive">
                             <div class="box"><i class="fa fa-shirt"></i><span>School Uniform Drive</span></div>
                         </label>
                     </div>
                         <div class="col-6 col-md-4 col-lg-3">
                         <label class="tw-give-opt">
-                            <input type="radio" name="designation" >
+                            <input type="radio" form="donate-form" name="designation" value="HIV / AIDS Awareness">
                             <div class="box"><i class="fa fa-heart-pulse"></i><span>HIV / AIDS Awareness</span></div>
                         </label>
                     </div>
@@ -209,16 +209,17 @@
 
                     <h6 class="tw-eyebrow mb-3">How often?</h6>
                     <div class="tw-freq mb-4">
-                        <label><input type="radio" name="freq" checked><span>Once-off</span></label>
-                        <label><input type="radio" name="freq"><span>Monthly</span></label>
+                        <label><input type="radio" form="donate-form" name="freq" value="Once-off" checked><span>Once-off</span></label>
+                        <label><input type="radio" form="donate-form" name="freq" value="Monthly"><span>Monthly</span></label>
                     </div>
 
                     <div class="tw-form">
-                        <form onsubmit="return false;">
+                        <form id="donate-form" action="https://formspree.io/f/mbgglndk" method="POST" class="tw-ajax-form" data-success="Thank you. Your pledge has been received and the team will contact you with next steps.">
+                            <input type="hidden" name="_subject" value="New donation pledge - Thandiwe website">
                             <div class="row g-3">
-                                <div class="col-md-6"><div class="form-floating"><input type="text" class="form-control" id="dname" placeholder="Your Name"><label for="dname">Your Name</label></div></div>
-                                <div class="col-md-6"><div class="form-floating"><input type="email" class="form-control" id="demail" placeholder="Your Email"><label for="demail">Your Email</label></div></div>
-                                <div class="col-12"><div class="form-floating"><textarea class="form-control" placeholder="Message" id="dmsg" style="height: 100px"></textarea><label for="dmsg">Message (optional)</label></div></div>
+                                <div class="col-md-6"><div class="form-floating"><input type="text" class="form-control" id="dname" name="name" placeholder="Your Name" required><label for="dname">Your Name</label></div></div>
+                                <div class="col-md-6"><div class="form-floating"><input type="email" class="form-control" id="demail" name="email" placeholder="Your Email" required><label for="demail">Your Email</label></div></div>
+                                <div class="col-12"><div class="form-floating"><textarea class="form-control" placeholder="Message" id="dmsg" name="message" style="height: 100px"></textarea><label for="dmsg">Message (optional)</label></div></div>
                                 <div class="col-12"><button class="btn btn-primary py-3 px-5" type="submit">Continue</button></div>
                             </div>
                         </form>
@@ -267,10 +268,13 @@
                 <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.3s">
                     <p class="tw-eyebrow text-dark mb-2" style="opacity:.7;">Stay Connected</p>
                     <h1 class="display-6 mb-3">Receive Stories, Programme Updates &amp; Ways to Get Involved</h1>
-                    <div class="position-relative w-100 mb-2">
-                        <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 60px;">
-                        <button type="button" class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                    </div>
+                    <form action="https://formspree.io/f/xvkkgezk" method="POST" class="tw-ajax-form tw-newsletter" data-success="Thank you for subscribing. You are now on our mailing list.">
+                        <input type="hidden" name="_subject" value="New newsletter signup - Thandiwe website">
+                        <div class="position-relative w-100 mb-2">
+                            <input class="form-control border-0 w-100 ps-4 pe-5" type="email" name="email" placeholder="Enter Your Email" style="height: 60px;" required>
+                            <button type="submit" class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </form>
                     <p class="mb-0 text-dark">Join our community and help us build a database of supporters, donors and partners.</p>
                 </div>
             </div>
@@ -348,6 +352,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/tw-forms.js"></script>
 
     <!-- Links that lead to pages not yet built simply scroll back to the top. -->
     <script>

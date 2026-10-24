@@ -31,7 +31,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Thandiwe custom stylesheet (shared across pages) -->
-    <link href="css/thandiwe.css?v=5" rel="stylesheet">
+    <link href="css/thandiwe.css?v=6" rel="stylesheet">
 </head>
 
 <body>
@@ -206,19 +206,20 @@
                     <div class="tw-form">
                         <h4 class="mb-1">Volunteer Application</h4>
                         <p class="mb-4" style="color:#6a7176;">Tell us a little about yourself and how you would like to help.</p>
-                        <form onsubmit="return false;">
+                        <form action="https://formspree.io/f/mjyyknga" method="POST" class="tw-ajax-form" data-success="Thank you for offering to help. The Thandiwe team will be in touch about next steps.">
+                            <input type="hidden" name="_subject" value="New volunteer application - Thandiwe website">
                             <div class="row g-3">
-                                <div class="col-md-6"><div class="form-floating"><input type="text" class="form-control" id="vname" placeholder="Your Name"><label for="vname">Your Name</label></div></div>
-                                <div class="col-md-6"><div class="form-floating"><input type="email" class="form-control" id="vemail" placeholder="Your Email"><label for="vemail">Your Email</label></div></div>
+                                <div class="col-md-6"><div class="form-floating"><input type="text" class="form-control" id="vname" name="name" placeholder="Your Name" required><label for="vname">Your Name</label></div></div>
+                                <div class="col-md-6"><div class="form-floating"><input type="email" class="form-control" id="vemail" name="email" placeholder="Your Email" required><label for="vemail">Your Email</label></div></div>
                                 <div class="col-12"><div class="form-floating">
-                                    <select class="form-select form-control" id="vrole"><option selected>How would you like to help?</option><option>Ballroom / dance</option><option>Chess</option><option>Music</option><option>Academic / STEM tutoring</option><option>Mentoring / career coaching</option><option>Community kitchen</option><option>Events</option><option>Digital / media</option><option>Other</option></select>
+                                    <select class="form-select form-control" id="vrole" name="area_of_interest"><option selected>How would you like to help?</option><option>Ballroom / dance</option><option>Chess</option><option>Music</option><option>Academic / STEM tutoring</option><option>Mentoring / career coaching</option><option>Community kitchen</option><option>Events</option><option>Digital / media</option><option>Other</option></select>
                                     <label for="vrole">Area of Interest</label>
                                 </div></div>
-                                <div class="col-12"><div class="form-floating"><textarea class="form-control" placeholder="About You" id="vmsg" style="height: 120px"></textarea><label for="vmsg">About You</label></div></div>
+                                <div class="col-12"><div class="form-floating"><textarea class="form-control" placeholder="About You" id="vmsg" name="message" style="height: 120px" required></textarea><label for="vmsg">About You</label></div></div>
                                 <div class="col-12"><button class="btn btn-primary py-3 px-5" type="submit">Submit Application</button></div>
                             </div>
                         </form>
-                        <p class="mt-3 mb-0" style="font-size:12px; color:#8a9096;">This is a demonstration form. Please email info@thandiwe.org.za to volunteer in the meantime.</p>
+                        <p class="mt-3 mb-0" style="font-size:12px; color:#8a9096;">We review every application and will be in touch. You can also email <a href="mailto:info@thandiwe.org.za" class="text-dark">info@thandiwe.org.za</a>.</p>
                     </div>
                 </div>
             </div>
@@ -370,10 +371,13 @@
                 <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.3s">
                     <p class="tw-eyebrow text-dark mb-2" style="opacity:.7;">Stay Connected</p>
                     <h1 class="display-6 mb-3">Receive Stories, Programme Updates &amp; Ways to Get Involved</h1>
-                    <div class="position-relative w-100 mb-2">
-                        <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 60px;">
-                        <button type="button" class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                    </div>
+                    <form action="https://formspree.io/f/xvkkgezk" method="POST" class="tw-ajax-form tw-newsletter" data-success="Thank you for subscribing. You are now on our mailing list.">
+                        <input type="hidden" name="_subject" value="New newsletter signup - Thandiwe website">
+                        <div class="position-relative w-100 mb-2">
+                            <input class="form-control border-0 w-100 ps-4 pe-5" type="email" name="email" placeholder="Enter Your Email" style="height: 60px;" required>
+                            <button type="submit" class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </form>
                     <p class="mb-0 text-dark">Join our community and help us build a database of supporters, donors and partners.</p>
                 </div>
             </div>
@@ -451,6 +455,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/tw-forms.js"></script>
 
     <!-- Links that lead to pages not yet built simply scroll back to the top. -->
     <script>
