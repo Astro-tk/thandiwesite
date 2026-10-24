@@ -422,6 +422,18 @@ span.tw-rainbow-line { display: inline-block; }
 .tw-measure-item span { font-size: 12px; color: #8a9096; text-transform: uppercase; letter-spacing: .5px; }
 
 /* ===================================================================
+   Split feature rows (row g-0): image fills its half and crops with
+   object-fit, so a tall/portrait photo can never dictate the row height
+==================================================================== */
+@media (min-width: 992px) {
+    .tw-feat-media { position: relative; min-height: 340px; }
+    .tw-feat-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+}
+@media (max-width: 991.98px) {
+    .tw-feat-media img { width: 100%; height: 260px; object-fit: cover; display: block; }
+}
+
+/* ===================================================================
    Programmes page - photo cards (extends .tw-focus with tagline + CTA)
 ==================================================================== */
 .tw-focus { display: flex; flex-direction: column; }
